@@ -12,10 +12,11 @@ engine = create_engine(URL.create(
     password=os.getenv("DB_PASSWORD"),
     host=os.getenv("DB_HOST"),
     port=int(os.getenv("DB_PORT")),
-    database=os.getenv("DB_NAME"),
+    database=os.getenv("DB_NAME")   
 ))
-Session = sessionmaker(engine)
 
+Session = sessionmaker(engine)
 
 class Base(DeclarativeBase):
     pass
+
